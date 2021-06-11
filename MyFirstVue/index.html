@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .active{
+            color: tomato;
+        }
+        .less{
+            color: grey;
+        }
+        .right{
+            color: green;
+        }
+        .over{
+            color: tomato;
+        }
+    </style>
+
+    <div id="app">
+		{{ message }}
+        <span v-text="message2"></span>
+
+        <a v-bind:href ="googleUrl">Google</a>
+
+        <template v-if="stock_number > 0">
+            <span v-if="stock_number > 0">Buy it, they are left {{ stock_number }} </span>
+        </template>
+        <span v-if="stock_number > 0">Buy</span>
+        <span v-else="stock_number > 0">Out of stack</span>
+
+        <ul>
+            <li v-for="friend in friends">{{friend}}</li>
+        </ul>
+        <ul>
+            <li v-for="user in users">{{user.name}} ({{user.age}})</li>
+        </ul>
+
+        <input type="text" v-model="textInput">
+        <span>{{textInput}}</span>
+
+        <button v-on:click="callAlert">Btn</button>
+        <span v-bind:class="{active: isActive}">Hello Vue</span>
+        <button v-on:click="toggleClass">Toggle class</button>
+
+        <span>Price: {{price}} yen</span>
+        <span>Inc.tax: {{priceWithTax}} yen</span>
+
+        <span>Type over {{length}} letters</span>
+        <input type="text" v-model="inputChars">
+        
+        <template v-if="inputLength < 10">
+            <span class="less">{{inputLength}}</span>
+        </template>
+        <template v-if="inputLength == 10">
+            <span class="right">{{inputLength}}</span>
+        </template>
+        <template v-if="inputLength > 10">
+            <span class="over">{{inputLength}}</span>
+        </template>
+
+        <input type="number" v-model="count">
+	</div>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        let app = new Vue({
+            el: '#app',
+            data:{
+                message: 'Hello Vue!',
+                message2: 'Goodbye JQuery Shit!',
+                googleUrl: 'https://google.com',
+                stock_number:1,
+                friends: ['Ken', 'Mike','John','Lisa'],
+                users: [
+                    {id: 1, name:'Ken', age: 20},
+                    {id: 2, name:'Mike', age: 23},
+                    {id: 3, name:'John', age: 21},
+                    {id: 4, name:'Lisa', age: 20},
+                    ],
+                textInput: 'a?',
+                isActive: true,
+                price: 100,
+                length: 10,
+                inputChars: '',
+                count:0
+            },
+            methods:{
+                callAlert: function(){
+                    alert('Clicked btn')
+                },
+                toggleClass: function(){
+                    this.isActive = !this.isActive
+                }
+            },
+            computed:{
+                priceWithTax: function(){
+                    return this.price * 1.25
+                },
+                inputLength: function(){
+                    return this.inputChars.length
+                },
+                leftNumbers: function(){
+                    return length - this.inputChars;
+                }
+            },
+            watch: {
+                count: function(newCount, OldCount){
+                    console.log('NewCount is:' + newCount)
+                    console.log('OldCount is:' + OldCount)
+                }
+            }
+        })
+    </script>
+</body>
+</html>
