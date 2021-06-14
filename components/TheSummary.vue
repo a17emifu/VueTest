@@ -1,5 +1,5 @@
 <template>
-    <div class="flex flex-col items-center">
+    <div class="flex flex-col">
         <h1 class="text-xl ">Sammanfattning</h1>
         <span class="text-sm mt-1 break-words font-bold">{{text}}</span>
         <span class="text-sm mt-2 break-words">{{subtext}}</span>
