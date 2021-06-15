@@ -37,7 +37,7 @@ export default {
   ],
   fontawesome: {
     icons: {
-      solid: [ 'faHome', 'faPhone'],
+      solid: [ 'faHome', 'faPhone', 'faMapMarkerAlt','faEnvelope'],
       regular: [ 'faEnvelope' ],
     }
   },
