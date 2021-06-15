@@ -1,5 +1,5 @@
 <template>
-	<div class="w-2/5 bg-yellow-400 p-4 flex flex-col">
+	<div id="sidebar" class="w-2/5 bg-yellow-400 p-8 flex flex-col">
         <TheProfile />
 		
 		<!--<div class="mt-6 ">
@@ -16,3 +16,8 @@
 		</div>
 	</div>
 </template>
+<style scoped>
+	#sidebar{
+		height: 297mm;
+	}
+</style>

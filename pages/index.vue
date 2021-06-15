@@ -1,78 +1,83 @@
 <template>
-  <div class="container">
-    <div>
-      <Logo />
-      <h1 class="title">
-        CV
-      </h1>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-      </div>
-    </div>
-  </div>
-</template>
+<div class="w-3/5 mt-6">
+<Histories :content= jobbHistory />
+<Histories :content= educationHistory />
+</div>
 
+
+</template>
 <script>
-export default {}
+export default {
+  data() {
+    return {
+      jobbHistory:{
+        icon: "suitcase" ,
+        title:"Arbetslivserfarenhet",
+        details:[
+          {
+            name:"GG Media",
+            subtext:"Redaktör",
+            date:"2017-2019",
+            description:"Distansjobb för ett japanskt företag som publicerar digitala nyheter om mode och skönhet. Korrekturläste artiklar och undervisade författare i hur de ska skriva bättre."
+          },
+          {
+            name:"Inflight Service Production Sweden AB",
+            subtext:"Lagerarbete",
+            date:"2017",
+            description:"Sommarvikariat. Plockade varor för taxfree-butiker. Stort fokus på både noggrannhet och tempo."
+          },
+          {
+            name:"Japanese-live.com",
+            subtext:"Japansklärare",
+            date:"2012-2014",
+            description:"Distansjobb. Undervisade elever i japanska genom videosamtal. Innehåll för lektionerna var samtal, grammatik, läsning samt analys av filmer, böcker m.m."
+          },
+        ]
+      },
+      educationHistory:{
+        icon:"graduation-cap",
+        title: "Utbildning",
+        details:[
+          {
+            name:"Mittuniversitetet",
+            subtext:"Informatik med inriktning systemutveckling, 180 hp",
+            date:"2018-2021",
+            description:""
+          },
+          {
+            name:"Högskolan i Skövde",
+            subtext:"Webbutvecklare - Programmering, 180 hp",
+            date:"2017-2018",
+            description:"* Bytte skola för att rikta in mig på systemutveckling istället."
+          },
+          {
+            name:"Vuxenutbildning Skövde",
+            subtext:"Svenska som andraspråk och engelska",
+            date:"2015-2016",
+            description:""
+          },
+          {
+            name:"SFI i Skara",
+            subtext:"Svenska för invandrareD",
+            date:"2014-2015",
+            description:""
+          },
+          {
+            name:"KEC Japanese Language Institute",
+            subtext:"Utbildning för japansklärare. Japan, Kyoto",
+            date:"2011-2013",
+            description:""
+          },
+          {
+            name:"Yokohama Midorigaoka-gymnasiet",
+            subtext:"Japansk Gymnasiumutbildning. Japan, Kanagawa",
+            date:"2007-2010",
+            description:""
+          },
+        ]
+      }
+    }
+  },
+}
 </script>
 
-<style>
-/* Sample `apply` at-rules with Tailwind CSS
-.container {
-@apply min-h-screen flex justify-center items-center text-center mx-auto;
-}
-*/
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.title {
-  font-family:
-    'Quicksand',
-    'Source Sans Pro',
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    'Helvetica Neue',
-    Arial,
-    sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
-}
-</style>

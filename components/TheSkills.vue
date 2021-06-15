@@ -14,7 +14,7 @@ export default {
         return {
             backends: {
                 title: "Backend",
-                list:['C#','.NET','.NET Core MVC','API-utveckling','SOLID','Clean Code']
+                list:['C#','.NET 5','.NET Core MVC','API-utveckling','SOLID','Clean Code']
             },
             databas: {
                 title: "Databas",
