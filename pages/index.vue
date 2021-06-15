@@ -58,7 +58,7 @@ export default {
           },
           {
             name:"SFI i Skara",
-            subtext:"Svenska för invandrareD",
+            subtext:"Svenska för invandrare",
             date:"2014-2015",
             description:""
           },

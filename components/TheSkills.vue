@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h1 class=" items-center text-xl">Kompetenser</h1>
+        <!--<h1 class=" items-center text-xl">Kompetenser</h1>-->
         <Skill :contents= backends />
         <Skill :contents= databas />
         <Skill :contents= frontends />

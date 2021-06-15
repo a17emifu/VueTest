@@ -1,6 +1,6 @@
 <template>
     <div id="language">
-        <h1 class=" items-center text-xl">Språk</h1>
+        <!--<h1 class=" items-center text-xl">Språk</h1>-->
         <ol class="mt-2">
             <li 
                 v-for="language in languages"

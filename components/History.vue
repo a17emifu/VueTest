@@ -8,7 +8,7 @@
         <div class="flex flex-col w-4/5">
             <h2 class="text-lg">{{detail.name}}</h2>
             <span class="text-gray-400 text-sm">{{detail.subtext}}</span>
-            <p class="mt-3 text-sm">{{detail.description}}</p>
+            <p class="mt-1 text-sm">{{detail.description}}</p>
         </div>
     </div>
 </template>
